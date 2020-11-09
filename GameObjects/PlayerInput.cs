@@ -25,14 +25,14 @@ public class PlayerInput : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.LeftArrow))
 		{
-			this.transform.Translate(Vector3.up, -5);
+			this.transform.Rotate(Vector3.up, -5);
 		}
 
 		// Code for the movement of the Player (CP) Right.
 
 		if (Input.GetKey(KeyCode.RightArrow))
 		{
-			this.transform.Translate(Vector3.up, 5);
+			this.transform.Rotate(Vector3.up, 5);
 		}
 	}
 }
