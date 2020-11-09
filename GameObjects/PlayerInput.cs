@@ -1,14 +1,14 @@
 using UnityEngine;
-using System.Collections; 
+using System.Collections;
 
 public class PlayerInput : MonoBehaviour
 {
 	void Start() {  }
 
-	void Update() 
+	void Update()
 	{
 		// Code for the movement of the Player (CP) foward.
-	
+
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
 			this.transform.Translate(Vector3.forward * Time.deltaTime);
@@ -27,7 +27,7 @@ public class PlayerInput : MonoBehaviour
 		{
 			this.transform.Translate(Vector3.up, -5);
 		}
-		
+
 		// Code for the movement of the Player (CP) Right.
 
 		if (Input.GetKey(KeyCode.RightArrow))
