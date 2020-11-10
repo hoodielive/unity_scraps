@@ -42,6 +42,29 @@ public class PlayerInput : MonoBehaviour
 		{
 			this.transform.Rotate(Vector3.up, 5);
 		}
+
+		if (Input.GetKeyUp(KeyCode.Z))
+		{
+			foreach (var d in this.myCollection)
+			{
+				Debug.Log(d.ID);
+			}
+		}
+	}
+
+	void OnTriggerEnter2D(Collider c)
+	{
+		if (c.tag.Equals("MyCollectable"))
+		{
+			var collect = c.gameObject.GetComponent<MyCollectable>();
+			MyCollectableData data = new MyCollectableData();
+
+			data.ID = collect.ID;
+			data.size = collect.size;
+
+			this.myCollection.Add(data);
+			Destroy(c.gameObject);
+		}
 	}
 }
 
