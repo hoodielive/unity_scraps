@@ -1,8 +1,16 @@
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerInput : MonoBehaviour
 {
+	public List<MyCollectableData> myCollection = new List<MyCollectableData>();
+	
+	void Awake()
+	{
+		// Make sure we start clean
+		
+		this.myCollection.Clear();
+	}
 	void Start() {  }
 
 	void Update()
