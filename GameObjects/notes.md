@@ -46,4 +46,6 @@ private int year;
 [SerializeField]
 private string color;
 ```
+
 These expose private fields to the UnityEngine Inspector Window.
+
