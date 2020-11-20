@@ -55,3 +55,16 @@ Static GameObjects
 Many optimizations need to know if an object can move during gameplay.
 
 Information about a Static, non-moving, object can often be precomputed in the editor assumingthat it will not be invalidated by a change in the object's position.
+
+This helps with rendering and frame-rate of your game.
+
+Such techniques are used for optimization and it is a good idea to learn about the benefits of them as you design and develop your game. 
+
+To identify a GameObject as Static or Non-Static, there is a checkbox in the Inspector Window. If the checkbox is marked, the Unity will inform various internal systems that the object will not move. The whole idea here is performance enhancement! These internal systems are as follows:
+
+1. Global Illumination: advanced lighting for a scene.
+2. Occulder and Occludee: rendering optimization based on the visibility of objects from specific camera positions.
+3. Batching: rendering optimization that combines several objects into one larger object.
+4. Navigation: the system that enables characters to negotiate in the scene.
+5. Off-Mesh Links: connections made by the Navigation system between discontinuous areas of the scene.
+6. Reflection Probe: captures a spherical view of its surroundings in all directions.
