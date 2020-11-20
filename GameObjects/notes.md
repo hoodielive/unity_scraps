@@ -49,3 +49,9 @@ private string color;
 
 These expose private fields to the UnityEngine Inspector Window.
 
+
+Static GameObjects
+
+Many optimizations need to know if an object can move during gameplay.
+
+Information about a Static, non-moving, object can often be precomputed in the editor assumingthat it will not be invalidated by a change in the object's position.
