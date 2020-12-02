@@ -17,7 +17,7 @@ public BasicMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, moveVertical);
+        Vector3 movement = new Vector3(moveHorizontal * Time.deltaTime, moveVertical);
 
         rb.AddForce(movement * speed);
 
