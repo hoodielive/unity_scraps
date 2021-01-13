@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerSpeed = walkSpeed;
-        anim = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
+        rigidBody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -34,9 +35,10 @@ public class PlayerController : MonoBehaviour
             rigidbody.velocity += transform.right * Input.GetAxisRaw("Horizontal") * playerSpeed;
             isMoving = true;
         }
-        
+
         if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxis("Veritical") < -0.5f)
         {
+            // transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * playerSpeed);
             rigidbody.velocity += transform.forward * Input.GetAxisRaw("Vertical") * playerSpeed;
             isMoving = true;
         }
