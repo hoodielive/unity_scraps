@@ -1,15 +1,17 @@
+using System;
 using UnityEngine;
 
 public BasicMovement : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb; 
+    public Animator animator;
 
     void Start()
     {
         // Cache.
-
         rb = GetComponent<Rigidbody2D>();
+        animator.
     }
 
     void FixedUpdate()
@@ -22,5 +24,4 @@ public BasicMovement : MonoBehaviour
         rb.AddForce(movement * speed);
 
     }
-
 }
